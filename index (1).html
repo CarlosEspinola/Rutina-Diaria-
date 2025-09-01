@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutina diaria</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="tema-colorido">
+
+  <h1>Rutina diaria</h1>
+
+  <div class="selector-dia">
+    <label for="daySelector">Día:</label>
+    <select id="daySelector">
+      <option value="lunes">Lunes</option>
+      <option value="martes">Martes</option>
+      <option value="miércoles">Miércoles</option>
+      <option value="jueves">Jueves</option>
+      <option value="viernes">Viernes</option>
+      <option value="sábado">Sábado</option>
+      <option value="domingo">Domingo</option>
+    </select>
+  </div>
+
+  <div class="orden">
+    <label for="ordenSelect">Ordenar por:</label>
+    <select id="ordenSelect">
+      <option value="estado">Estado</option>
+      <option value="nombre">Nombre</option>
+    </select>
+  </div>
+
+  <div class="tema-selector">
+    <label for="temaSelect">Tema:</label>
+    <select id="temaSelect">
+      <option value="claro">Claro</option>
+      <option value="colorido" selected>Colorido</option>
+      <option value="oscuro">Oscuro</option>
+    </select>
+  </div>
+
+  <div class="input-tarea">
+    <input type="text" id="inputNuevaTarea" placeholder="Agregar nueva tarea..." />
+    <button id="btnAgregarTarea">Agregar</button>
+  </div>
+
+  <div id="taskList" class="lista-tareas"></div>
+
+  <div class="progreso-container">
+    <div id="progresoTexto">Progreso: 0/0 completadas</div>
+    <div class="barra-fondo">
+      <div id="barraProgreso" class="barra-progreso"></div>
+    </div>
+  </div>
+
+  <div id="mensajeFelicidades" class="felicidades">🎉 ¡Todas las tareas completadas hoy! 🎉</div>
+
+  <div class="contador">
+    Días completados: <span id="contadorDias">0</span>
+  </div>
+
+  <div class="historial">
+    <h3>Historial de días completados</h3>
+    <ul id="listaHistorial"></ul>
+  </div>
+
+  <audio id="sonidoFelicidades" src="https://www.myinstants.com/media/sounds/yeah-boy.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
